@@ -1,5 +1,8 @@
+using System;
+using Microsoft.AspNetCore.Mvc;
+
 [Route("api/claims/claim")]
- public class LifeController : Controller
+ public class ClaimsController : Controller
  {
       // POST api/claims/claim
     [HttpPost]
@@ -8,7 +11,7 @@
         return Created("", value);
     }
 
- // POST api/lifeclaims/claim/5
+ // POST api/claims/claim/5
     [HttpGet("{id}")]
     public IActionResult Get(int id)
     {   
@@ -25,6 +28,7 @@
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)
     {
-        return Delete(id);
+        return Ok(id);
     }
- }
+
+}

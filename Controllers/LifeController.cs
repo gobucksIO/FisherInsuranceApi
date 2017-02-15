@@ -1,3 +1,6 @@
+
+using Microsoft.AspNetCore.Mvc;
+
 [Route("api/life/quotes")]
  public class LifeController : Controller
  {
@@ -25,6 +28,6 @@
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)
     {
-        return Delete(id);
+        return Ok(id);
     }
  }
