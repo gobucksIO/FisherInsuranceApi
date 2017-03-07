@@ -3,15 +3,15 @@ using System;
 namespace FisherInsuranceApi.Model{
 
     public class Claim{
-        public int Id;
+        public int Id {get; set;} 
 
-        public string PolicyNumber;
+        public string PolicyNumber {get; set;} 
 
-        public DateTime LossDate;
+        public DateTime LossDate {get; set;} 
 
-        public decimal LossAmount;
+        public decimal LossAmount {get; set;} 
 
-        public string Status;
+        public string Status {get; set;} 
     }
 
 }

@@ -16,6 +16,7 @@ namespace FisherInsuranceApi
     {
         public Startup(IHostingEnvironment env)
         {
+            
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -28,8 +29,8 @@ namespace FisherInsuranceApi
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddSingleton<IMemoryStore, MemoryStore>(); 
+        {   
+            services.AddDbContext<FisherContext>();
             // Add framework services.
             services.AddMvc();
         }

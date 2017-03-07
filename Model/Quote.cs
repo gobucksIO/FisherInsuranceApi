@@ -2,13 +2,13 @@ using System;
 
     namespace FisherInsuranceApi.Model{
     public class Quote{
-    public int Id;
+    public int Id {get; set;} 
 
-    public string Product;
+    public string Product {get; set;} 
 
-    public DateTime ExpireDate;
+    public DateTime ExpireDate {get; set;} 
 
-    public decimal Price;
+    public decimal Price {get; set;} 
 
     }
 }
